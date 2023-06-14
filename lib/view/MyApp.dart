@@ -36,8 +36,6 @@ class HomeState extends State<MyApp>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //задаётся цвет фона
-      backgroundColor: Colors.white,
           //построение верхней панели экрана
           appBar: AppBar(
             //текст в верху окна
@@ -58,8 +56,6 @@ class HomeState extends State<MyApp>{
                 key: ValueKey(carsList[index]["name"]),
                 //выставляется отступ между картами
                 margin: const EdgeInsets.all(10),
-                //задаётся цвет фона карточек
-                color: const Color.fromARGB(100, 119, 221, 246),
                 //прописываются параметры карточек
                 child: ListTile(
                   leading: Text(carsList[index]["name"]),
