@@ -1,16 +1,8 @@
 # atuo_catalog
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+выполнил Фадеев Дмитрий Александрович
+# описание проекта
+данный прект был сделан в android studio с плагинами Dart и Flutter собран при помощи gradle 
+# использованны версии SDK: 
+android: api32 version 17.0.6
+dart:  3.0.5
+flutter: 3.10.4
