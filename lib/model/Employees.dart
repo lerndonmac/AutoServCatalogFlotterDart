@@ -13,9 +13,11 @@ class Employees {
     return Employees(jsonMap["name"]as String, jsonMap["type"]as String, jsonMap["works"]as List);
 
   }
+  // конвертация в json
+  Map toJson()=>{"name": name, "type": type, "works":works};
 
   @override
   String toString() {
-    return 'Employees{type: $name}';
+    return 'Employees{name: $name }';
   }
 }
