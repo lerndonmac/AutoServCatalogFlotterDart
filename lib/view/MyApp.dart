@@ -14,7 +14,7 @@ class MyApp extends StatefulWidget {
 }
 
 class HomeState extends State<MyApp>{
-//лист хронящий элементы из json файла
+//лист хронящий объекты преобразованные из json файла
   List<Employees> employeesList =[];
 //метод запускаемый перед отрисовкой экрана
   @override
@@ -29,7 +29,8 @@ class HomeState extends State<MyApp>{
     //конвертация из строки в результативный объект json
     final data = await json.decode(response);
     setState(() {
-      //заполнение листа по ключу employees
+      //заполнение листа по ключу employees переборкой элементов из получаемого
+      // map листа и преобразование их в объекты класса Employees
       for(Map map in data["employees"]){
         employeesList.add(Employees.fromJson(map));
       }
@@ -49,7 +50,7 @@ class HomeState extends State<MyApp>{
           //построение основной части экрана
         //проверяется что массив не пуст после чего создаётся виджет ListView через Builder
           body: employeesList.isNotEmpty?ListView.builder(
-            //задаётся количество элементов на осноле длинны массива carsList
+            //задаётся количество элементов на осноле длинны массива employeesList
             itemCount: employeesList.length,
             //задаётся itemBuilder
             itemBuilder: (context, index){
