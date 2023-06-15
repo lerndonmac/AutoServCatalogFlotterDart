@@ -1,16 +1,17 @@
 # atuo_catalog
+выполнил Фадеев Дмитрий Александрович
+# описание проекта
+данный прект был сделан в android studio с плагинами Dart и Flutter собран при помощи gradle
+была реализованно чтение из json файла и вывод данных на экран андроид приложения в виде списка карточек,
+применена иконка приложения в виде эмблемы компании протон,
+использованны цвета в стилистике сайта протона
+# использованны версии SDK:
+android: api32 version 17.0.6
+dart:  3.0.5
+flutter: 3.10.4
 
-A new Flutter project.
+запуск производился с использованием эмулятора авндроид телефона встроенного в android studio
+# параметры эмулятора
+api level 30 визуальное отображение в виде pixel 2 на android 11 x86_64
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

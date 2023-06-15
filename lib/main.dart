@@ -8,6 +8,7 @@ void main() {
   runApp(MaterialApp(
     //прописана тема виджета
     theme: ThemeData(
+      fontFamily: "Sans",
       //начальный цвет выставлен на голубой
       primaryColor: Colors.blue,
         //задаётся цвет фона карточек
