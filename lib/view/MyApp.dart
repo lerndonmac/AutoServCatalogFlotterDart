@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:atuo_catalog/model/Employees.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatefulWidget {
 
 class HomeState extends State<MyApp>{
 //лист хронящий элементы из json файла
-  List carsList = [];
+  List<Employees> employeesList =[];
 //метод запускаемый перед отрисовкой экрана
   @override
   void initState(){
@@ -29,7 +30,9 @@ class HomeState extends State<MyApp>{
     final data = await json.decode(response);
     setState(() {
       //заполнение листа по ключу employees
-      carsList = data["employees"];
+      for(Map map in data["employees"]){
+        employeesList.add(Employees.fromJson(map));
+      }
     });
 
   }
@@ -45,22 +48,22 @@ class HomeState extends State<MyApp>{
           ),
           //построение основной части экрана
         //проверяется что массив не пуст после чего создаётся виджет ListView через Builder
-          body: carsList.isNotEmpty?ListView.builder(
+          body: employeesList.isNotEmpty?ListView.builder(
             //задаётся количество элементов на осноле длинны массива carsList
-            itemCount: carsList.length,
+            itemCount: employeesList.length,
             //задаётся itemBuilder
             itemBuilder: (context, index){
               //лист заполняется карточками для отображения данных
               return Card(
                 //задаётся ключ элемента листа
-                key: ValueKey(carsList[index]["name"]),
+                key: ValueKey(employeesList[index].name),
                 //выставляется отступ между картами
                 margin: const EdgeInsets.all(10),
                 //прописываются параметры карточек
                 child: ListTile(
-                  leading: Text(carsList[index]["name"]),
-                  title: Text(carsList[index]["type"]),
-                  subtitle: Text(carsList[index]["works"].toString(),
+                  leading: Text(employeesList[index].name),
+                  title: Text(employeesList[index].type),
+                  subtitle: Text(employeesList[index].works.toString(),
                   ),
                 ),
               );
