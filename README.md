@@ -12,6 +12,18 @@ flutter: 3.10.4
 
 запуск производился с использованием эмулятора авндроид телефона встроенного в android studio
 # параметры эмулятора
-api level 30 визуальное отображение в виде pixel 2 на android 11 x86_64
+создан с экраном pixel 2 на api 30 android 11 x86_64
+
+# установка проекта
+для лёгкой установки рекомендуется установить android studio с сайта:https://developer.android.com/studio
+установить плагины Dart и flutter
+создать новый проект из git для этого в стартовом окне Welcom to Android Studio нажать на троеточие справа от кнопки open и выбрать get project from version control
+в открывшемся окне в поле URL: вставить ссылку на репозиторий: https://github.com/lerndonmac/AutoServCatalogFlotterDart
+в поле Directory выбрать место куда будет скачен проект
+после создания проекта следует подождать полного индексирования проекта
+для запуска приложения: во вкладке справа Device manager создать (если нету) и запускить эмулятор телефона после чего сверху слева от main.dart развернуть список устройств и выбрать refresh (после запуска эмулятора) после чего с права от main.dart нажать на зелёную кнопку Run в виде иконки "play"
+если не выставленны sdk то нажать в контекстном меню кнопку file\settings ввести в поисковик dart найти dart во вкладке Languages & Frameworks указать путь к sdk dart скаченного с сайта: https://dart.dev/get-dart
+и сделать тоже самое для flutter указав там путь к sdk flutter с сайта: https://docs.flutter.dev/get-started/install/windows
+
 
 
